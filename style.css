@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* navbar css */
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-right: 4%;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 4%;
+
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover{
+    color: rgb(255, 217, 0);
+    
+  }
+
+
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo{
+    margin-right: auto;
+    margin-left: 4%;
+    font-size: 20px;
+  }
+
+
+  /* page1 css */
+
+.page1{
+     height: 100vh;
+     /* text-align: left; ito ung header na Crossfit */
+     background-color: #ffffff;
+     background-size: 100%;
+     background-repeat: no-repeat;
+     display: flex;
+     justify-items: center;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.p1-content{
+    margin-left: 27px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+
+    
+    line-height: 70px; /* Sets the line height to 1.5 times the font size */
+
+    
+}
+
+
+.g-d{
+    margin-top: -19px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 12px;
+
+    animation: typing 2s steps(30) 1s 1 normal both;
+
+    transition: color 0.3s ease;
+
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.p1-Img{
+    width: 57vh;
+    margin-left: -70vh;
+    margin-top: 41px;
+}
+
+
+/* card links */
+.card svg {
+  height: 25px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 50px;
+  width: 385px;
+  margin-bottom: 10px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1;
+}
+
+/* .card::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #000000;
+}
+
+.card::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: rgb(255, 217, 0);
+} */
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.card:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.card:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
+}
+
+.card span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: 'Fira Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+}
+
+.card .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.card .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1);
+}
+
+.card .social-link:hover {
+  background-color: rgb(255, 217, 0);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* page2 css */
+
+.page2{
+    width: 100%;
+    display: flex;
+    /* justify-items: center; */
+    align-items: center;
+    /* justify-content: space-around; */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #111111;
+    color: #ffffff;
+
+    /* padding: 80px 130px 10px 130px; */
+
+}
+
+.p2-content{
+    font-family: 'Poppins', sans-serif;
+}
+
+.p2-header{
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.column {
+  flex: 1; /* Make columns take up equal width */
+  padding: 68px; /* Add padding for spacing */
+
+}
+
+.skill-bar {
+  width: 100%;
+  height: 25px;
+  background-color: #f3f3f3;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  background-color: rgb(255, 217, 0);
+  border-radius: 60px;
+  transition: width 2s ease-in-out;
+  color: #000000;
+}
+
+/* Optional: Add styles for text label or percentage */
+.skill-bar-label {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.p2-skills p{
+  font-size: 20px;
+  text-align: left;
+  padding: 15px 0px 5px 0px;
+}
+
+/* page3 css */
+
+
+
+.page3{
+  width: 100%;
+	height: 200vh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+  background: rgb(237 237 237);
+	overflow: hidden;
+  text-align: center;
+    
+}
+
+.page3 p{
+  font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 0px -110px 0px;
+    color: rgb(0, 0, 0);
+}
+
+.img-p3{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.image-container {
+  width: 100%; /* Set the container width to 100% of its parent element */
+  height: 100%; /* Set the container height to 100% of its parent element */
+  overflow: hidden; /* Hide any overflow from the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.image-container img {
+  width: 70%; /* Set the image width to 100% of its parent element (the container) */
+  height: 70%; /* Set the image height to 100% of its parent element (the container) */
+  object-fit: cover; /* Scale the image to cover the entire container */
+  border-radius: 13px;
+  margin: 10px 50px 50px 50px;
+  transition: .5s ease;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+}
+
+.image-container img:hover{
+  transition: .5s ease;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+/* testimonial section */
+.testimonial-section {
+  background-color: #111111;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-title{
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin: 0px 0px 0px 27px;
+}
+
+.testimonial-item {
+  flex-basis: 50%;
+  padding: 30px;
+}
+
+.testimonial-quote {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #c0c0c0;
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+/* contact me */
+
+#contact {
+  padding: 40px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact-form textarea {
+  height: 150px;
+}
+
+#contact-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact-form button:hover {
+  background-color: rgb(255, 217, 0);
+  color: #000000;
+}
+
+/* download button */
+
+
